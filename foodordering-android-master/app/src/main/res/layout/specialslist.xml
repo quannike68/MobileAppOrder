@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#FFECC5"
+    app:cardCornerRadius="25dp"
+    app:cardElevation="10dp"
+    app:cardMaxElevation="15dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/foodImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="image of the food item"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/foodImage"
+            android:text="food name goes here"
+            android:textColor="#7B3F00"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/foodInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/foodImage"
+            android:text="additional information goes here"
+            android:textColor="#7B3F00"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/foodPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodInformation"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/foodImage"
+            android:text="price goes here"
+            android:textColor="#7B3F00"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/foodQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foodPrice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:text="0"
+            android:textColor="#7B3F00"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:background="@drawable/circle_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/foodPrice"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/foodQuantity"
+            android:text="+"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            app:backgroundTint="#7B3F00" />
+
+        <Button
+            android:id="@+id/removeButton"
+            android:background="@drawable/circle_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/foodPrice"
+            android:layout_marginBottom="15dp"
+            android:layout_toStartOf="@id/foodQuantity"
+            android:layout_marginStart="8dp"
+            android:text="-"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:backgroundTint="#7B3F00" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
